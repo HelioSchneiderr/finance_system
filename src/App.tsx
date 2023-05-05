@@ -7,6 +7,7 @@ import { items } from './data/items';
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter'
 import { TableArea } from './components/TableArea'
 import { InfoArea } from './components/InfoArea';
+import { InputArea } from './components/inputArea'
 
 const App = () => {
 
@@ -58,7 +59,7 @@ const App = () => {
           expense={expense}
         />
 
-        {/* Insert Area*/}
+        <InputArea/>
 
         <TableArea list={filteredList}/>
 
