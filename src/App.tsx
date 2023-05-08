@@ -59,7 +59,7 @@ const App = () => {
           expense={expense}
         />
 
-        <InputArea/>
+        <InputArea />
 
         <TableArea list={filteredList}/>
 

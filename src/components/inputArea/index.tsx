@@ -1,6 +1,19 @@
 import * as C from './style'
+import { Item } from '../../types/Item'
+import { items } from '../../data/items'
 
-export const InputArea = ()=>{
+type Props = {
+    list: Item[],
+}
+
+export const InputArea = ({list}:Props)=>{
+    
+    const handleSubmit = ({event}: string)=>{
+        items.push({
+            date: event.target.value,
+        })
+    }
+    
     return(
         <C.Container>
             <input type="date"/>
