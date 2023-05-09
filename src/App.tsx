@@ -43,6 +43,12 @@ const App = () => {
     setCurrentMonth(newMonth)
   }
 
+  const handleSubmit = (item: Item)=>{
+    let newList = [...list]
+    newList.push(item)
+    setList(newList)
+}
+
   return (
     <C.Container>
       <C.Header>
@@ -59,7 +65,7 @@ const App = () => {
           expense={expense}
         />
 
-        <InputArea />
+        <InputArea addItem={handleSubmit}/>
 
         <TableArea list={filteredList}/>
 
